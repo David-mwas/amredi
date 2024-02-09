@@ -2,13 +2,13 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import AmrediLogo from "./assets/amredi.svg";
+
 function App() {
   return (
-    <div className="flex flex-col w-full h-screen ">
+    <div className="flex flex-col w-full h-screen bg">
       <header className="flex items-center justify-between w-full px-4 py-2 md:py-4 lg:px-6 lg:py-4">
         <a className="flex items-center space-x-2" href="#">
-          <img  src={AmrediLogo} className="h-14" />
-          
+          <img src={AmrediLogo} className="h-14" />
         </a>
         <nav className="hidden space-x-4 text-sm font-medium lg:flex">
           <a
@@ -33,12 +33,21 @@ function App() {
       </header>
       <div className="flex flex-col items-center text-center justify-center h-full space-y-8">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold">Download Amredi App</h1>
-          <p className="text-gray-500 dark:text-gray-400">
-            The best app for all your needs
+          <p className="text-lg font-semibold">
+            Amredi empowers young mothers, by providing education, training, and
+            community support, helping them build brighter futures.
           </p>
+          <p className="text-gray-500 dark:text-gray-400">
+            " Redefining Motherhood, One Success Story at a Time "
+          </p>
+          <h1 className="text-2xl font-bold text-pink-500">
+            Download Amredi App
+          </h1>
         </div>
-        <button className="mx-auto bg-pink-500 px-12 rounded-md py-2" size="lg">
+        <button
+          className="mx-auto bg-pink-500 px-12 rounded-md py-2 text-white font-bold"
+          size="lg"
+        >
           Download
         </button>
       </div>
