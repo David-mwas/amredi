@@ -2,11 +2,12 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import AmrediLogo from "./assets/amredi.svg";
-
+import { FaCloudDownloadAlt } from "react-icons/fa";
+import pic from "./assets/african-removebg-preview.png";
 function App() {
   return (
-    <div className="flex flex-col w-full h-screen bg">
-      <header className="flex items-center justify-between w-full px-4 py-2 md:py-4 lg:px-6 lg:py-4">
+    <div className="flex flex-col w-screen h-screen items-center bg">
+      <header className="flex items-center justify-between w-full px-4 py-2 md:py-4 lg:px-6 lg:py-4 bg-white">
         <a className="flex items-center space-x-2" href="#">
           <img src={AmrediLogo} className="h-14" />
         </a>
@@ -31,13 +32,16 @@ function App() {
           </a>
         </nav>
       </header>
-      <div className="flex flex-col items-center text-center justify-center h-full space-y-8">
-        <div className="space-y-2">
-          <p className="text-lg font-semibold">
+      <div className="w-full items-center flex  justify-center">
+        {/* <img src={pic} alt="" className="w-[300px] h-[200px] object-cover"/> */}
+      </div>
+      <div className="flex flex-col items-center text-center justify-center h-full space-y-6 p-4">
+        <div className="space-y-4 flex flex-col items-center">
+          <p className="text-xl font-semibold md:w-[60%]">
             Amredi empowers young mothers, by providing education, training, and
             community support, helping them build brighter futures.
           </p>
-          <p className="text-gray-500 dark:text-gray-400">
+          <p className="text-gray-900 dark:text-gray-600">
             " Redefining Motherhood, One Success Story at a Time "
           </p>
           <h1 className="text-2xl font-bold text-pink-500">
@@ -45,10 +49,11 @@ function App() {
           </h1>
         </div>
         <button
-          className="mx-auto bg-pink-500 px-12 rounded-md py-2 text-white font-bold"
+          className="mx-auto bg-pink-500 px-12 rounded-md py-2 text-white font-bold flex gap-2 items-center justify-center hover:bg-pink-600 transition duration-300 ease-in-out text-xl"
           size="lg"
         >
-          Download
+          <span>Download </span>
+          <FaCloudDownloadAlt />
         </button>
       </div>
     </div>
