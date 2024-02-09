@@ -1,11 +1,15 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-
+import AmrediLogo from "./assets/amredi.svg";
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col w-full h-screen ">
       <header className="flex items-center justify-between w-full px-4 py-2 md:py-4 lg:px-6 lg:py-4">
+        <a className="flex items-center space-x-2" href="#">
+          <img  src={AmrediLogo} className="h-14" />
+          
+        </a>
         <nav className="hidden space-x-4 text-sm font-medium lg:flex">
           <a
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500"
@@ -27,7 +31,7 @@ function App() {
           </a>
         </nav>
       </header>
-      <div className="flex flex-col items-center space-y-2 text-center">
+      <div className="flex flex-col items-center text-center justify-center h-full space-y-8">
         <div className="space-y-2">
           <h1 className="text-3xl font-bold">Download Amredi App</h1>
           <p className="text-gray-500 dark:text-gray-400">
