@@ -1,12 +1,12 @@
 import AmrediLogo from "./assets/amredi.svg";
 import { FaCloudDownloadAlt, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 import APK from "./app/amredi.apk";
 import PhoneImage from "./assets/amredi-removebg-preview.png";
 import { useEffect, useState } from "react";
 function App() {
   return (
-    <div className="flex flex-col w-full h-screen bg">
+    <div className="flex flex-col w-full h-screen bg overflow-x-hidden">
       <header className="flex items-center justify-between w-full px-4 md:px-16 lg:px-20 py-2 md:py-4 bg-white fixed z-20 h-[60px] shadow-lg">
         <a className="flex items-center space-x-2" href="#">
           <img src={AmrediLogo} alt="background" className="h-14" />
@@ -32,8 +32,13 @@ function App() {
           </a>
         </nav>
       </header>
-      <div className="flex flex-col md:flex-row p-8 w-full  gap-8 mt-[150px] items-center justify-center h-full md:mt-0">
-        <div className="space-y-4 flex flex-col md:w-[800px]">
+      <div className="flex flex-col md:flex-row p-8 w-full  gap-8 mt-[180px] items-center justify-center h-full md:mt-0">
+        <motion.div
+          className="space-y-4 flex flex-col md:w-[800px]"
+          initial={{ x: -500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
           <p className="text-[20px] md:text-[30px] font-bold md:w-[80%]">
             Amredi empowers young mothers, by providing education, training, and
             community support, helping them build brighter futures.
@@ -54,15 +59,15 @@ function App() {
             <span>Download </span>
             <FaCloudDownloadAlt />
           </a>
-        </div>
-        <div className="tilted-image-container md:mt-[100px]">
-          <img
-            src={PhoneImage}
-            alt=""
-            className="tilted-image"
-            
-          />
-        </div>
+        </motion.div>
+        <motion.div
+          className="tilted-image-container md:mt-[100px]"
+          initial={{ x: 500, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          <img src={PhoneImage} alt="" className="tilted-image" />
+        </motion.div>
       </div>
     </div>
   );
