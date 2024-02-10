@@ -1,18 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import AmrediLogo from "./assets/amredi.svg";
 import { FaCloudDownloadAlt, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
-import pic from "./assets/african-removebg-preview.png";
+
 import APK from "./app/amredi.apk";
 function App() {
   return (
-    <div className="flex flex-col w-screen h-screen items-center bg">
-      <header className="flex items-center justify-between w-full px-4 py-2 md:py-4 lg:px-6 lg:py-4 bg-white">
+    <div className="flex flex-col w-screen h-screen ">
+      <header className="flex items-center justify-between w-full px-4 md:px-16 lg:px-20 py-2 md:py-4 bg-white">
         <a className="flex items-center space-x-2" href="#">
-          <img src={AmrediLogo} className="h-14" />
+          <img src={AmrediLogo} alt="background" className="h-14" />
         </a>
-        <nav className="hidden space-x-4 text-sm font-medium lg:flex">
+        <nav className="hidden space-x-4 text-sm font-medium md:flex">
           <a
             className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-500"
             href="#"
@@ -33,8 +31,8 @@ function App() {
           </a>
         </nav>
       </header>
-      <div className="w-full items-center flex  justify-center">
-        {/* <img src={pic} alt="" className="w-[300px] h-[200px] object-cover"/> */}
+      <div className="w-full items-center flex  justify-center px-4 md:px-12 lg:px-20">
+        
       </div>
       <div className="flex flex-col items-center text-center justify-center h-full space-y-6 p-4">
         <div className="space-y-4 flex flex-col items-center">
@@ -42,10 +40,10 @@ function App() {
             Amredi empowers young mothers, by providing education, training, and
             community support, helping them build brighter futures.
           </p>
-          <p className="text-gray-900 dark:text-gray-600 font-semibold flex space-x-2 relative">
-            <FaQuoteLeft className="bottom-3 absolute left-[-15px]" />
+          <p className="inline-flex text-gray-900 dark:text-gray-600 font-semibold  space-x-2 ">
+            <FaQuoteLeft className="bottom-3 " />
             <span>Redefining Motherhood, One Success Story at a Time</span>
-            <FaQuoteRight className=" absolute right-[-22px]" />
+            <FaQuoteRight className="" />
           </p>
           <h1 className="text-2xl font-bold text-pink-500">
             Download Amredi App
