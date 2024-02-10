@@ -4,7 +4,20 @@ import viteLogo from "/vite.svg";
 import AmrediLogo from "./assets/amredi.svg";
 import { FaCloudDownloadAlt, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import pic from "./assets/african-removebg-preview.png";
+import APK from "./app/app-arm64-v8a-release.apk";
 function App() {
+  const downloadApk = () => {
+    const apkUrl = { APK };
+
+    // Create a temporary anchor element
+    const anchor = document.createElement("a");
+    anchor.href = apkUrl;
+    anchor.download = "app-arm64-v8a-release.apk"; // Specify the file name for the download
+    anchor.click();
+
+    // Cleanup
+    URL.revokeObjectURL(anchor.href);
+  };
   return (
     <div className="flex flex-col w-screen h-screen items-center bg">
       <header className="flex items-center justify-between w-full px-4 py-2 md:py-4 lg:px-6 lg:py-4 bg-white">
@@ -51,6 +64,7 @@ function App() {
           </h1>
         </div>
         <button
+          onClick={downloadApk}
           className="mx-auto bg-pink-500 px-12 rounded-md py-2 text-white font-bold flex gap-2 items-center justify-center hover:bg-pink-600 transition duration-300 ease-in-out text-xl"
           size="lg"
         >
