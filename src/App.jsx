@@ -54,19 +54,23 @@ function App() {
           <a
             href={APK}
             download="amredi.apk"
-            className=" bg-pink-500 px-2 rounded-md py-2 text-white font-bold flex gap-2 items-center justify-center hover:bg-pink-600 transition duration-300 ease-in-out text-xl hover:shadow-xl  transform hover:gap-4 w-[270px]"
+            className=" bg-pink-500 px-2 rounded-md py-2 text-white font-bold flex gap-2 items-center justify-center hover:bg-pink-600 transition duration-300 ease-in-out text-xl hover:shadow-xl  transform hover:gap-4 w-[270px] aniamte-pulse "
           >
             <span>Download </span>
             <FaCloudDownloadAlt />
           </a>
         </motion.div>
         <motion.div
-          className="tilted-image-container md:mt-[100px]"
+          className="tilted-image-container md:mt-[100px]  "
           initial={{ x: 500, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <img src={PhoneImage} alt="" className="tilted-image" />
+          <img
+            src={PhoneImage}
+            alt=""
+            className="tilted-image shadow-lg object-contain rounded-lg cursor-pointer"
+          />
         </motion.div>
       </div>
     </div>
