@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import AmrediLogo from "./assets/amredi.svg";
-import { FaCloudDownloadAlt } from "react-icons/fa";
+import { FaCloudDownloadAlt, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import pic from "./assets/african-removebg-preview.png";
 function App() {
   return (
@@ -37,12 +37,14 @@ function App() {
       </div>
       <div className="flex flex-col items-center text-center justify-center h-full space-y-6 p-4">
         <div className="space-y-4 flex flex-col items-center">
-          <p className="text-xl font-semibold md:w-[60%]">
+          <p className="text-xl font-bold md:w-[60%]">
             Amredi empowers young mothers, by providing education, training, and
             community support, helping them build brighter futures.
           </p>
-          <p className="text-gray-900 dark:text-gray-600">
-            " Redefining Motherhood, One Success Story at a Time "
+          <p className="text-gray-900 dark:text-gray-600 font-semibold flex space-x-2 relative">
+            <FaQuoteLeft className="bottom-3 absolute left-[-15px]" />
+            <span>Redefining Motherhood, One Success Story at a Time</span>
+            <FaQuoteRight className=" absolute right-[-22px]" />
           </p>
           <h1 className="text-2xl font-bold text-pink-500">
             Download Amredi App
