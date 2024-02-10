@@ -64,7 +64,7 @@ function App() {
           className="tilted-image-container md:mt-[100px]"
           initial={{ x: 500, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          transition={{ duration: 1, delay: 0.5 }}
         >
           <img src={PhoneImage} alt="" className="tilted-image" />
         </motion.div>
